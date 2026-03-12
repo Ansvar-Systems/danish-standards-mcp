@@ -1,0 +1,160 @@
+[
+  {
+    "id": "get-cfcs-control",
+    "tool": "get_control",
+    "args": { "control_id": "cfcs-vejledning:N01" },
+    "assertions": [
+      { "type": "contains", "value": "Netvaerkssegmentering" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "get-statens-control",
+    "tool": "get_control",
+    "args": { "control_id": "statens-iso27001:A.5.1" },
+    "assertions": [
+      { "type": "contains", "value": "Politikker for informationssikkerhed" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "get-sds-control",
+    "tool": "get_control",
+    "args": { "control_id": "sds-sundhed:SDS01" },
+    "assertions": [
+      { "type": "contains", "value": "Kryptering af patientdata" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "search-danish-term",
+    "tool": "search_controls",
+    "args": { "query": "informationssikkerhed" },
+    "assertions": [
+      { "type": "contains", "value": "statens-iso27001" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "search-english-monitoring",
+    "tool": "search_controls",
+    "args": { "query": "segmentation" },
+    "assertions": [
+      { "type": "contains", "value": "cfcs-vejledning" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "iso-mapping-5-1",
+    "tool": "get_iso_mapping",
+    "args": { "iso_control": "A.5.1" },
+    "assertions": [
+      { "type": "contains", "value": "statens-iso27001" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "sector-healthcare",
+    "tool": "search_by_sector",
+    "args": { "sector": "healthcare" },
+    "assertions": [
+      { "type": "contains", "value": "sds-sundhed" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "list-all-frameworks",
+    "tool": "list_frameworks",
+    "args": {},
+    "assertions": [
+      { "type": "contains", "value": "cfcs-vejledning" },
+      { "type": "contains", "value": "statens-iso27001" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "list-cfcs-controls",
+    "tool": "list_controls",
+    "args": { "framework_id": "cfcs-vejledning" },
+    "assertions": [
+      { "type": "contains", "value": "N01" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "get-framework-cfcs",
+    "tool": "get_framework",
+    "args": { "framework_id": "cfcs-vejledning" },
+    "assertions": [
+      { "type": "contains", "value": "CFCS" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "compare-cfcs-statens",
+    "tool": "compare_controls",
+    "args": { "query": "sikkerhed", "framework_ids": ["cfcs-vejledning", "statens-iso27001"] },
+    "assertions": [
+      { "type": "contains", "value": "cfcs-vejledning" },
+      { "type": "contains", "value": "statens-iso27001" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "list-data-sources",
+    "tool": "list_sources",
+    "args": {},
+    "assertions": [
+      { "type": "contains", "value": "Data Sources" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "negative-unknown-control",
+    "tool": "get_control",
+    "args": { "control_id": "cfcs-vejledning:999.999" },
+    "assertions": [
+      { "type": "is_error" },
+      { "type": "error_type", "value": "NO_MATCH" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "negative-empty-search",
+    "tool": "search_controls",
+    "args": { "query": "" },
+    "assertions": [
+      { "type": "is_error" },
+      { "type": "error_type", "value": "INVALID_INPUT" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "negative-unknown-framework",
+    "tool": "get_framework",
+    "args": { "framework_id": "nonexistent-framework" },
+    "assertions": [
+      { "type": "is_error" },
+      { "type": "error_type", "value": "NO_MATCH" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "meta-about",
+    "tool": "about",
+    "args": {},
+    "assertions": [
+      { "type": "contains", "value": "Danish Standards MCP" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "meta-freshness",
+    "tool": "check_data_freshness",
+    "args": {},
+    "assertions": [
+      { "type": "contains", "value": "Data Freshness Report" },
+      { "type": "has_meta" }
+    ]
+  }
+]

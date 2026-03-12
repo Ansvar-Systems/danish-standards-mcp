@@ -1,0 +1,12 @@
+{
+  "name": "danish-standards-mcp",
+  "display_name": "Danish Standards MCP",
+  "description": "Danish government cybersecurity standards -- CFCS, Digitaliseringsstyrelsen, Statens ISO 27001, D-maerket, Datatilsynet, Sundhedsdatastyrelsen",
+  "author": "Ansvar Systems",
+  "author_url": "https://ansvar.eu",
+  "homepage": "https://github.com/Ansvar-Systems/danish-standards-mcp",
+  "category": "compliance",
+  "tags": ["danish", "denmark", "cybersecurity", "compliance", "cfcs", "datatilsynet", "standards"],
+  "license": "Apache-2.0",
+  "tools_count": 11
+}

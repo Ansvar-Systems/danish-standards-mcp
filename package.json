@@ -1,0 +1,50 @@
+{
+  "name": "@ansvar/danish-standards-mcp",
+  "version": "0.1.0",
+  "description": "Danish government cybersecurity standards MCP -- CFCS guidelines, Digitaliseringsstyrelsen security guidance, ISO 27001 for Danish government, D-maerket, Datatilsynet measures, Sundhedsdatastyrelsen requirements. Part of the Ansvar MCP Network (ansvar.ai/mcp)",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "danish-standards-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist && find . -name '*.tsbuildinfo' -delete",
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/http-server.ts",
+    "start": "node dist/index.js",
+    "start:http": "node dist/http-server.js",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:contract": "vitest run __tests__/contract/",
+    "build:db": "node --import tsx scripts/build-db.ts",
+    "ingest:fetch": "node --import tsx scripts/ingest-fetch.ts",
+    "ingest:diff": "node --import tsx scripts/ingest-diff.ts",
+    "ingest:full": "npm run ingest:fetch && npm run ingest:diff && npm run build:db && npm run coverage:update",
+    "coverage:update": "node --import tsx scripts/update-coverage.ts",
+    "coverage:verify": "node --import tsx scripts/verify-coverage.ts",
+    "freshness:check": "node --import tsx scripts/check-freshness.ts",
+    "prepare": "test -f dist/index.js || npm run build"
+  },
+  "keywords": ["mcp", "danish", "denmark", "cfcs", "digitaliseringsstyrelsen", "cybersecurity", "compliance", "standards"],
+  "author": "Ansvar Systems <hello@ansvar.eu>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ansvar-Systems/danish-standards-mcp.git"
+  },
+  "engines": { "node": ">=20" },
+  "files": ["dist", "data", "sources.yml"],
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.0.0",
+    "tsx": "^4.21.0"
+  },
+  "dependencies": {
+    "@ansvar/mcp-sqlite": "^1.0.3",
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "zod": "^3.24.0"
+  }
+}
