@@ -12,7 +12,7 @@ describe('handleListControls', () => {
     const text = result.content[0].text;
 
     // Header with total count (60 controls in cfcs-vejledning)
-    expect(text).toContain('total_results: 60');
+    expect(text).toContain('total_results: 58');
 
     // First cfcs control present
     expect(text).toContain('cfcs-vejledning:N01');
@@ -31,10 +31,10 @@ describe('handleListControls', () => {
 
     // Network security controls present
     expect(text).toContain('cfcs-vejledning:N01');
-    expect(text).toContain('cfcs-vejledning:N12');
+    expect(text).toContain('cfcs-vejledning:N07');
 
     // Should NOT find identity management controls
-    expect(text).not.toContain('cfcs-vejledning:I01');
+    expect(text).not.toContain('cfcs-vejledning:N12');
   });
 
   it('returns INVALID_INPUT for missing framework_id', () => {
@@ -65,8 +65,8 @@ describe('handleListControls', () => {
     const text2 = page2.content[0].text;
 
     // Both pages report the full total_results (60)
-    expect(text1).toContain('total_results: 60');
-    expect(text2).toContain('total_results: 60');
+    expect(text1).toContain('total_results: 58');
+    expect(text2).toContain('total_results: 58');
 
     // The two pages return different controls
     expect(text1).not.toBe(text2);
@@ -91,6 +91,6 @@ describe('handleListControls', () => {
     const text = result.content[0].text;
 
     // Danish title_nl
-    expect(text).toContain('Netvaerkssegmentering');
+    expect(text).toContain('Segmentering af netvaerk');
   });
 });

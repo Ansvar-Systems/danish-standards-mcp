@@ -27,7 +27,7 @@ describe('handleGetControl', () => {
     expect(text).toContain('8.22');
 
     // Danish description present
-    expect(text).toContain('Netvaerkssegmentering');
+    expect(text).toContain('Segmentering af netvaerk');
   });
 
   it('returns NO_MATCH for cfcs-vejledning:999.999', () => {

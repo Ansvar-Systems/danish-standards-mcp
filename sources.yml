@@ -4,6 +4,7 @@ category: "domain_intelligence"
 
 sources:
   - name: "CFCS Cybersikkerhedsvejledning"
+    id: "cfcs-vejledning"
     authority: "Center for Cybersikkerhed (CFCS)"
     official_url: "https://www.cfcs.dk/da/forebyggelse/vejledninger/"
     api_url: null
@@ -25,7 +26,123 @@ sources:
       - "da"
       - "en"
 
+  - name: "CFCS ICS/OT-sikkerhedsvejledning"
+    id: "cfcs-ics"
+    authority: "Center for Cybersikkerhed (CFCS)"
+    official_url: "https://www.cfcs.dk/da/forebyggelse/vejledninger/industrielle-kontrolsystemer/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "Security guidance for industrial control systems and operational technology"
+      version: "2024 edition"
+      item_count: 25
+    languages:
+      - "da"
+      - "en"
+
+  - name: "CFCS ransomware-beskyttelse"
+    id: "cfcs-ransomware"
+    authority: "Center for Cybersikkerhed (CFCS)"
+    official_url: "https://www.cfcs.dk/da/forebyggelse/vejledninger/ransomware/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "Ransomware prevention, detection, and response guidance"
+      version: "2024 edition"
+      item_count: 18
+    languages:
+      - "da"
+      - "en"
+
+  - name: "CFCS cloudsikkerhedsvejledning"
+    id: "cfcs-cloud"
+    authority: "Center for Cybersikkerhed (CFCS)"
+    official_url: "https://www.cfcs.dk/da/forebyggelse/vejledninger/cloudsikkerhed/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "Cloud security guidance for Danish organizations"
+      version: "2024 edition"
+      item_count: 19
+    languages:
+      - "da"
+      - "en"
+
+  - name: "CFCS leverandoerstyring"
+    id: "cfcs-supply-chain"
+    authority: "Center for Cybersikkerhed (CFCS)"
+    official_url: "https://www.cfcs.dk/da/forebyggelse/vejledninger/leverandoerstyring/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "Supply chain security guidance"
+      version: "2024 edition"
+      item_count: 17
+    languages:
+      - "da"
+      - "en"
+
+  - name: "CFCS sikker softwareudvikling"
+    id: "cfcs-secure-dev"
+    authority: "Center for Cybersikkerhed (CFCS)"
+    official_url: "https://www.cfcs.dk/da/forebyggelse/vejledninger/sikker-softwareudvikling/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "Secure software development guidance"
+      version: "2024 edition"
+      item_count: 18
+    languages:
+      - "da"
+      - "en"
+
   - name: "Digitaliseringsstyrelsens sikkerhedsvejledning"
+    id: "digst-sikkerhed"
     authority: "Digitaliseringsstyrelsen"
     official_url: "https://digst.dk/sikkerhed/"
     api_url: null
@@ -47,7 +164,31 @@ sources:
       - "da"
       - "en"
 
+  - name: "Faellesoffentlig Digital Arkitektur - sikkerhedskrav"
+    id: "digst-fda"
+    authority: "Digitaliseringsstyrelsen (Digst)"
+    official_url: "https://arkitektur.digst.dk/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "HTML"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "CC BY 4.0"
+      url: "https://digst.dk/om-os/vilkaar/"
+      summary: "Creative Commons Attribution - free to use with attribution"
+    coverage:
+      scope: "Security requirements for common public digital architecture including MitID, service platforms, data sharing"
+      version: "2024 edition"
+      item_count: 16
+    languages:
+      - "da"
+      - "en"
+
   - name: "Statens implementering af ISO 27001"
+    id: "statens-iso27001"
     authority: "Digitaliseringsstyrelsen / Statens IT"
     official_url: "https://statens-it.dk/"
     api_url: null
@@ -70,6 +211,7 @@ sources:
       - "en"
 
   - name: "D-maerket"
+    id: "d-maerket"
     authority: "Erhvervsstyrelsen / D-maerket"
     official_url: "https://d-maerket.dk/"
     api_url: null
@@ -92,6 +234,7 @@ sources:
       - "en"
 
   - name: "Datatilsynets sikkerhedsforanstaltninger"
+    id: "datatilsynet-dk"
     authority: "Datatilsynet (Danish DPA)"
     official_url: "https://www.datatilsynet.dk/"
     api_url: null
@@ -114,6 +257,7 @@ sources:
       - "en"
 
   - name: "Sundhedsdatastyrelsens IT-sikkerhedskrav"
+    id: "sds-sundhed"
     authority: "Sundhedsdatastyrelsen (SDS)"
     official_url: "https://sundhedsdatastyrelsen.dk/"
     api_url: null
@@ -131,6 +275,190 @@ sources:
       scope: "IT security requirements for Danish healthcare data systems"
       version: "2023 edition"
       item_count: 21
+    languages:
+      - "da"
+      - "en"
+
+  - name: "MedCom standarder for sundhedsmeddelelser"
+    id: "medcom-standarder"
+    authority: "MedCom"
+    official_url: "https://www.medcom.dk/standarder/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF/HTML"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "Healthcare messaging and integration security standards"
+      version: "2024 edition"
+      item_count: 17
+    languages:
+      - "da"
+      - "en"
+
+  - name: "Finanstilsynets IKT-krav"
+    id: "finanstilsynet-ikt"
+    authority: "Finanstilsynet (Danish FSA)"
+    official_url: "https://www.finanstilsynet.dk/lovgivning/vejledninger-og-tilsynsafgoerelser/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF/HTML"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2025"
+    effective_date: "2025-01-17"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "ICT security and risk management requirements for Danish financial companies including DORA"
+      version: "2025 edition"
+      item_count: 24
+    languages:
+      - "da"
+      - "en"
+
+  - name: "NIS2 dansk implementering (Lov om net- og informationssikkerhed)"
+    id: "nis2-dk"
+    authority: "Forsvarsministeriet / Sektormyndigheder"
+    official_url: "https://www.retsinformation.dk/eli/lta/2024/1705"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "HTML"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2025"
+    effective_date: "2025-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector legislation - free to reference"
+    coverage:
+      scope: "Danish NIS2 transposition requirements for essential and important entities"
+      version: "2025 edition"
+      item_count: 21
+    languages:
+      - "da"
+      - "en"
+
+  - name: "Sikkerhedscirkul aeret"
+    id: "sikkerhedscirkulaeret"
+    authority: "Justitsministeriet / PET / CFCS"
+    official_url: "https://www.retsinformation.dk/eli/retsinfo/2014/10338"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "HTML"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2014"
+    effective_date: "2014-11-17"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Government circular - free to reference"
+    coverage:
+      scope: "Requirements for handling classified government information"
+      version: "2014 edition (current)"
+      item_count: 21
+    languages:
+      - "da"
+      - "en"
+
+  - name: "Energistyrelsens cybersikkerhedskrav"
+    id: "energistyrelsen-cyber"
+    authority: "Energistyrelsen"
+    official_url: "https://ens.dk/ansvarsomraader/cybersikkerhed/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2025"
+    effective_date: "2025-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "Cybersecurity requirements for Danish energy sector operators"
+      version: "2025 edition"
+      item_count: 15
+    languages:
+      - "da"
+      - "en"
+
+  - name: "Trafikstyrelsens IKT-sikkerhedskrav"
+    id: "trafikstyrelsen-ikt"
+    authority: "Trafikstyrelsen"
+    official_url: "https://www.trafikstyrelsen.dk/da/it-sikkerhed/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2025"
+    effective_date: "2025-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "ICT security requirements for Danish transport sector"
+      version: "2025 edition"
+      item_count: 12
+    languages:
+      - "da"
+      - "en"
+
+  - name: "KL Kommunernes sikkerhedsvejledning"
+    id: "kl-sikkerhed"
+    authority: "KL (Kommunernes Landsforening)"
+    official_url: "https://www.kl.dk/it-og-digitalisering/informationssikkerhed/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF/HTML"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Public sector guidance - free to reference"
+    coverage:
+      scope: "Information security guidance for Danish municipalities"
+      version: "2024 edition"
+      item_count: 14
+    languages:
+      - "da"
+      - "en"
+
+  - name: "DS 484 Dansk Standard for informationssikkerhed"
+    id: "ds484"
+    authority: "Dansk Standard (DS)"
+    official_url: "https://www.ds.dk/da/standarder/informationssikkerhed/"
+    api_url: null
+    retrieval_method: "BULK_DOWNLOAD"
+    format: "PDF"
+    authentication: "none"
+    update_frequency: "annual"
+    version: "2024"
+    effective_date: "2024-01-01"
+    license:
+      type: "Public sector publication"
+      url: null
+      summary: "Danish code of practice - free to reference"
+    coverage:
+      scope: "Danish code of practice for information security management with ISO 27001/27002 adaptations"
+      version: "2024 edition"
+      item_count: 18
     languages:
       - "da"
       - "en"

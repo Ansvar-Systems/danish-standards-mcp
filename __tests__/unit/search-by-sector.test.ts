@@ -14,16 +14,17 @@ describe('handleSearchBySector', () => {
     expect(text).toContain('sds-sundhed');
   });
 
-  it('finance sector returns d-maerket and datatilsynet-dk', () => {
+  it('finance sector returns d-maerket, datatilsynet-dk, and finanstilsynet-ikt', () => {
     const result = handleSearchBySector({ sector: 'finance' });
 
     expect(result.isError).toBeFalsy();
 
     const text = result.content[0].text;
 
-    // d-maerket and datatilsynet-dk cover finance sector
+    // d-maerket, datatilsynet-dk, and finanstilsynet-ikt cover finance sector
     expect(text).toContain('d-maerket');
     expect(text).toContain('datatilsynet-dk');
+    expect(text).toContain('finanstilsynet-ikt');
   });
 
   it('government sector returns cfcs-vejledning, digst-sikkerhed, and statens-iso27001', () => {
@@ -49,7 +50,8 @@ describe('handleSearchBySector', () => {
     expect(text).toContain('cfcs-vejledning');
 
     // Must not leak controls from non-government sector-only frameworks
-    expect(text).not.toContain('sds-sundhed:');
+    // (energistyrelsen-cyber is energy-only)
+    expect(text).not.toContain('energistyrelsen-cyber:');
   });
 
   it('unknown sector returns INVALID_INPUT', () => {

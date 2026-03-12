@@ -27,11 +27,25 @@ const SOURCES_YML = join(PROJECT_ROOT, 'sources.yml');
 // Map from framework DB id -> source id used in coverage.json
 const FRAMEWORK_TO_SOURCE: Record<string, string> = {
   'cfcs-vejledning': 'cfcs-vejledning',
+  'cfcs-ics': 'cfcs-ics',
+  'cfcs-ransomware': 'cfcs-ransomware',
+  'cfcs-cloud': 'cfcs-cloud',
+  'cfcs-supply-chain': 'cfcs-supply-chain',
+  'cfcs-secure-dev': 'cfcs-secure-dev',
   'digst-sikkerhed': 'digst-sikkerhed',
+  'digst-fda': 'digst-fda',
   'statens-iso27001': 'statens-iso27001',
   'd-maerket': 'd-maerket',
   'datatilsynet-dk': 'datatilsynet-dk',
   'sds-sundhed': 'sds-sundhed',
+  'medcom-standarder': 'medcom-standarder',
+  'finanstilsynet-ikt': 'finanstilsynet-ikt',
+  'nis2-dk': 'nis2-dk',
+  'sikkerhedscirkulaeret': 'sikkerhedscirkulaeret',
+  'energistyrelsen-cyber': 'energistyrelsen-cyber',
+  'trafikstyrelsen-ikt': 'trafikstyrelsen-ikt',
+  'kl-sikkerhed': 'kl-sikkerhed',
+  'ds484': 'ds484',
 };
 
 // Canonical source metadata — derived from sources.yml
@@ -60,14 +74,31 @@ function parseSourcesYml(content: string): SourceMeta[] {
     const freq = freqMatch ? freqMatch[1] : 'annual';
     const srcType = (typeMatch ? typeMatch[1] : 'pdf') as 'github' | 'pdf';
 
-    // Determine source id from name
-    let id = 'unknown';
-    if (fullName.includes('CFCS')) id = 'cfcs-vejledning';
-    else if (fullName.includes('Digitaliseringsstyrelsen')) id = 'digst-sikkerhed';
-    else if (fullName.includes('Statens') || fullName.includes('ISO 27001')) id = 'statens-iso27001';
-    else if (fullName.includes('D-maerket') || fullName.includes('D-mærket')) id = 'd-maerket';
-    else if (fullName.includes('Datatilsynet')) id = 'datatilsynet-dk';
-    else if (fullName.includes('Sundhedsdatastyrelsen') || fullName.includes('SDS')) id = 'sds-sundhed';
+    // Determine source id from explicit id field or name
+    const idMatch = block.match(/^\s*id:\s*"([^"]+)"/m);
+    let id = idMatch ? idMatch[1] : 'unknown';
+    if (id === 'unknown') {
+      if (fullName.includes('CFCS') && fullName.includes('ICS')) id = 'cfcs-ics';
+      else if (fullName.includes('CFCS') && fullName.includes('ransomware')) id = 'cfcs-ransomware';
+      else if (fullName.includes('CFCS') && fullName.includes('cloud')) id = 'cfcs-cloud';
+      else if (fullName.includes('CFCS') && fullName.includes('leverandoer')) id = 'cfcs-supply-chain';
+      else if (fullName.includes('CFCS') && fullName.includes('softwareudvikling')) id = 'cfcs-secure-dev';
+      else if (fullName.includes('CFCS')) id = 'cfcs-vejledning';
+      else if (fullName.includes('FDA') || fullName.includes('Arkitektur')) id = 'digst-fda';
+      else if (fullName.includes('Digitaliseringsstyrelsen')) id = 'digst-sikkerhed';
+      else if (fullName.includes('Statens') || fullName.includes('ISO 27001')) id = 'statens-iso27001';
+      else if (fullName.includes('D-maerket') || fullName.includes('D-mærket')) id = 'd-maerket';
+      else if (fullName.includes('Datatilsynet')) id = 'datatilsynet-dk';
+      else if (fullName.includes('Sundhedsdatastyrelsen') || fullName.includes('SDS')) id = 'sds-sundhed';
+      else if (fullName.includes('MedCom')) id = 'medcom-standarder';
+      else if (fullName.includes('Finanstilsynet')) id = 'finanstilsynet-ikt';
+      else if (fullName.includes('NIS2')) id = 'nis2-dk';
+      else if (fullName.includes('Sikkerhedscirkulaeret') || fullName.includes('sikkerhedscirkul')) id = 'sikkerhedscirkulaeret';
+      else if (fullName.includes('Energistyrelsen')) id = 'energistyrelsen-cyber';
+      else if (fullName.includes('Trafikstyrelsen')) id = 'trafikstyrelsen-ikt';
+      else if (fullName.includes('KL') || fullName.includes('Kommunernes')) id = 'kl-sikkerhed';
+      else if (fullName.includes('DS 484') || fullName.includes('Dansk Standard')) id = 'ds484';
+    }
 
     sources.push({ id, name: fullName, update_frequency: freq, source_type: srcType });
   }

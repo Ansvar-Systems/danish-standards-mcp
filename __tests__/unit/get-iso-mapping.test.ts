@@ -3,19 +3,19 @@ import { describe, it, expect } from 'vitest';
 import { handleGetIsoMapping } from '../../src/tools/get-iso-mapping.js';
 
 describe('handleGetIsoMapping', () => {
-  it('finds Danish controls mapped to ISO A.5.1', () => {
-    const result = handleGetIsoMapping({ iso_control: 'A.5.1' });
+  it('finds Danish controls mapped to ISO 5.1', () => {
+    const result = handleGetIsoMapping({ iso_control: '5.1' });
 
     expect(result.isError).toBeFalsy();
     expect(result._meta).toBeDefined();
 
     const text = result.content[0].text;
 
-    // statens-iso27001 controls with iso_mapping="A.5.1" must appear
+    // statens-iso27001 controls with iso_mapping="5.1" must appear
     expect(text).toContain('statens-iso27001:A.5.1');
 
     // Should show the ISO control in the heading
-    expect(text).toContain('A.5.1');
+    expect(text).toContain('5.1');
 
     // Markdown table structure
     expect(text).toContain('| ID |');

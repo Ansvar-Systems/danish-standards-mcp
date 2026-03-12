@@ -18,7 +18,7 @@ describe('handleListFrameworks', () => {
 
     // Framework names present
     expect(text).toContain('CFCS');
-    expect(text).toContain('Statens');
+    expect(text).toContain('statens-iso27001');
     expect(text).toContain('Digitaliseringsstyrelsen');
 
     // Issuing bodies present
@@ -35,7 +35,7 @@ describe('handleListFrameworks', () => {
     expect(text).toContain('| ID |');
     expect(text).toContain('|');
 
-    // 6 frameworks
-    expect(text).toContain('6 frameworks');
+    // 20 frameworks
+    expect(text).toContain('20 frameworks');
   });
 });

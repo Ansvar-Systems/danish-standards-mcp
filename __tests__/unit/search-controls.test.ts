@@ -114,7 +114,7 @@ describe('handleSearchControls', () => {
 
   it('language fallback: Danish title shown when English title is null for a Danish-only control', () => {
     // Search for a control that exists in Danish
-    const result = handleSearchControls({ query: 'Netvaerkssegmentering', language: 'en' });
+    const result = handleSearchControls({ query: 'Segmentering af netvaerk', language: 'en' });
 
     expect(result.isError).toBeFalsy();
 

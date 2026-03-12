@@ -14,7 +14,7 @@ describe('meta-tools', () => {
     expect(result._meta).toBeDefined();
   });
 
-  it('list_sources returns all 6 Danish sources', () => {
+  it('list_sources returns all 20 Danish sources', () => {
     const result = handleListSources();
     const text = result.content[0].text;
     expect(text).toContain('CFCS');

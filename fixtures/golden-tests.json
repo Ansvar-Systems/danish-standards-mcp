@@ -4,7 +4,7 @@
     "tool": "get_control",
     "args": { "control_id": "cfcs-vejledning:N01" },
     "assertions": [
-      { "type": "contains", "value": "Netvaerkssegmentering" },
+      { "type": "contains", "value": "Segmentering af netvaerk" },
       { "type": "has_meta" }
     ]
   },
@@ -22,7 +22,7 @@
     "tool": "get_control",
     "args": { "control_id": "sds-sundhed:SDS01" },
     "assertions": [
-      { "type": "contains", "value": "Kryptering af patientdata" },
+      { "type": "contains", "value": "Adgangskontrol til patientdata" },
       { "type": "has_meta" }
     ]
   },
@@ -47,7 +47,7 @@
   {
     "id": "iso-mapping-5-1",
     "tool": "get_iso_mapping",
-    "args": { "iso_control": "A.5.1" },
+    "args": { "iso_control": "5.1" },
     "assertions": [
       { "type": "contains", "value": "statens-iso27001" },
       { "type": "has_meta" }
@@ -106,6 +106,60 @@
     "args": {},
     "assertions": [
       { "type": "contains", "value": "Data Sources" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "get-nis2-control",
+    "tool": "get_control",
+    "args": { "control_id": "nis2-dk:NIS01" },
+    "assertions": [
+      { "type": "contains", "value": "Ledelsens ansvar for cybersikkerhed" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "get-finanstilsynet-control",
+    "tool": "get_control",
+    "args": { "control_id": "finanstilsynet-ikt:FT01" },
+    "assertions": [
+      { "type": "contains", "value": "IKT-risikostyring" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "get-cfcs-ics-control",
+    "tool": "get_control",
+    "args": { "control_id": "cfcs-ics:ICS01" },
+    "assertions": [
+      { "type": "contains", "value": "OT-netvaerk" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "sector-energy",
+    "tool": "search_by_sector",
+    "args": { "sector": "energy" },
+    "assertions": [
+      { "type": "contains", "value": "energistyrelsen-cyber" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "sector-finance",
+    "tool": "search_by_sector",
+    "args": { "sector": "finance" },
+    "assertions": [
+      { "type": "contains", "value": "finanstilsynet-ikt" },
+      { "type": "has_meta" }
+    ]
+  },
+  {
+    "id": "sector-transport",
+    "tool": "search_by_sector",
+    "args": { "sector": "transport" },
+    "assertions": [
+      { "type": "contains", "value": "trafikstyrelsen-ikt" },
       { "type": "has_meta" }
     ]
   },

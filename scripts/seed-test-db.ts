@@ -83,6 +83,35 @@ insertFramework.run('datatilsynet-dk', 'Datatilsynet Security Measures', 'Datati
 
 insertFramework.run('sds-sundhed', 'SDS Healthcare IT Security', 'Sundhedsdatastyrelsens IT-sikkerhedskrav', 'Sundhedsdatastyrelsen (SDS)', '2023', '2023-01-01', 'IT security requirements for Danish healthcare data systems', '["healthcare"]', 'Organized by domains: patient data protection, system security, availability, physical security, governance', 'https://sundhedsdatastyrelsen.dk/', 'Public sector publication', 'da+en');
 
+// New frameworks
+insertFramework.run('cfcs-ics', 'CFCS ICS/OT Security Guidance', 'CFCS Vejledning om sikkerhed i industrielle kontrolsystemer', 'Center for Cybersikkerhed (CFCS)', '2024', '2024-01-01', 'Security guidance for industrial control systems and operational technology in Danish critical infrastructure', '["energy","water","transport","digital_infrastructure"]', 'OT security domains: network isolation, remote access, vulnerability management, incident response, monitoring', 'https://www.cfcs.dk/da/forebyggelse/vejledninger/industrielle-kontrolsystemer/', 'Public sector publication', 'da+en');
+
+insertFramework.run('cfcs-ransomware', 'CFCS Ransomware Protection Guidance', 'CFCS Vejledning om beskyttelse mod ransomware', 'Center for Cybersikkerhed (CFCS)', '2024', '2024-01-01', 'Guidance for preventing, detecting, and responding to ransomware attacks', '["government","healthcare","finance","energy","education","digital_infrastructure"]', 'Defense phases: prevention, detection, backup and recovery, response', 'https://www.cfcs.dk/da/forebyggelse/vejledninger/ransomware/', 'Public sector publication', 'da+en');
+
+insertFramework.run('cfcs-cloud', 'CFCS Cloud Security Guidance', 'CFCS Vejledning om cloudsikkerhed', 'Center for Cybersikkerhed (CFCS)', '2024', '2024-01-01', 'Security guidance for Danish organizations adopting cloud services', '["government","healthcare","finance","energy","education"]', 'Cloud security domains: risk assessment, identity, configuration, monitoring, vendor management', 'https://www.cfcs.dk/da/forebyggelse/vejledninger/cloudsikkerhed/', 'Public sector publication', 'da+en');
+
+insertFramework.run('cfcs-supply-chain', 'CFCS Supply Chain Security Guidance', 'CFCS Vejledning om leverandoerstyring', 'Center for Cybersikkerhed (CFCS)', '2024', '2024-01-01', 'Guidance for managing cybersecurity risks in the supply chain', '["government","healthcare","finance","energy","digital_infrastructure"]', 'Supply chain domains: vendor assessment, contracts, access, monitoring, software supply chain', 'https://www.cfcs.dk/da/forebyggelse/vejledninger/leverandoerstyring/', 'Public sector publication', 'da+en');
+
+insertFramework.run('cfcs-secure-dev', 'CFCS Secure Software Development Guidance', 'CFCS Vejledning om sikker softwareudvikling', 'Center for Cybersikkerhed (CFCS)', '2024', '2024-01-01', 'Guidance for secure software development practices', '["government","healthcare","finance","digital_infrastructure"]', 'Secure development domains: SDLC, coding, review, CI/CD, vulnerability management', 'https://www.cfcs.dk/da/forebyggelse/vejledninger/sikker-softwareudvikling/', 'Public sector publication', 'da+en');
+
+insertFramework.run('digst-fda', 'Common Public Digital Architecture Security (FDA)', 'Faellesoffentlig Digital Arkitektur - sikkerhedskrav', 'Digitaliseringsstyrelsen (Digst)', '2024', '2024-01-01', 'Security requirements for common public digital architecture in Denmark', '["government"]', 'FDA security domains: digital identity, data sharing, service platform, architecture security', 'https://arkitektur.digst.dk/', 'CC BY 4.0', 'da+en');
+
+insertFramework.run('finanstilsynet-ikt', 'Finanstilsynet ICT Requirements', 'Finanstilsynets IKT-krav', 'Finanstilsynet (Danish FSA)', '2025', '2025-01-17', 'ICT security and risk management requirements for Danish financial companies including DORA', '["finance"]', 'Domains: ICT governance, risk management, security, outsourcing, incident management, DORA', 'https://www.finanstilsynet.dk/lovgivning/', 'Public sector publication', 'da+en');
+
+insertFramework.run('nis2-dk', 'Danish NIS2 Implementation (L 111)', 'Dansk NIS2-implementering', 'Forsvarsministeriet / Sektormyndigheder', '2025', '2025-01-01', 'Network and information security requirements for essential and important entities in Denmark', '["energy","transport","finance","healthcare","water","digital_infrastructure","government"]', 'NIS2 obligations: governance, risk management (Art. 21), incident reporting (Art. 23)', 'https://www.retsinformation.dk/eli/lta/2024/1705', 'Public sector publication', 'da+en');
+
+insertFramework.run('sikkerhedscirkulaeret', 'Government Security Circular', 'Sikkerhedscirkul aeret', 'Justitsministeriet / PET / CFCS', '2014', '2014-11-17', 'Requirements for handling classified government information', '["government"]', 'Domains: classification, personnel security, physical security, IT security, transport', 'https://www.retsinformation.dk/eli/retsinfo/2014/10338', 'Public sector publication', 'da+en');
+
+insertFramework.run('medcom-standarder', 'MedCom Healthcare Messaging Security Standards', 'MedCom standarder for sundhedsmeddelelser', 'MedCom', '2024', '2024-01-01', 'Security standards for healthcare messaging and integration', '["healthcare"]', 'Domains: message security, access control, Health Data Network, audit and logging', 'https://www.medcom.dk/standarder/', 'Public sector publication', 'da+en');
+
+insertFramework.run('energistyrelsen-cyber', 'Danish Energy Agency Cybersecurity Requirements', 'Energistyrelsens cybersikkerhedskrav', 'Energistyrelsen', '2025', '2025-01-01', 'Cybersecurity requirements for Danish energy sector operators', '["energy"]', 'Domains: governance, OT security, incident management, supply security', 'https://ens.dk/ansvarsomraader/cybersikkerhed/', 'Public sector publication', 'da+en');
+
+insertFramework.run('trafikstyrelsen-ikt', 'Danish Transport Authority ICT Security', 'Trafikstyrelsens IKT-sikkerhedskrav', 'Trafikstyrelsen', '2025', '2025-01-01', 'ICT security requirements for Danish transport sector', '["transport"]', 'Domains: governance, operational security per mode, incident management, safety/security', 'https://www.trafikstyrelsen.dk/', 'Public sector publication', 'da+en');
+
+insertFramework.run('kl-sikkerhed', 'KL Municipal Information Security Guidance', 'KL Kommunernes sikkerhedsvejledning', 'KL (Kommunernes Landsforening)', '2024', '2024-01-01', 'Information security guidance for Danish municipalities', '["government"]', 'Domains: ISMS, citizen data, employee security, IT operations, NIS2 compliance', 'https://www.kl.dk/it-og-digitalisering/informationssikkerhed/', 'Public sector publication', 'da+en');
+
+insertFramework.run('ds484', 'Danish Code of Practice for Information Security', 'DS 484 Dansk Standard for informationssikkerhed', 'Dansk Standard (DS)', '2024', '2024-01-01', 'Danish code of practice for information security management based on ISO 27001/27002', '["government","healthcare","finance","education"]', 'Traditional ISO domains with Danish regulatory adaptations', 'https://www.ds.dk/da/standarder/informationssikkerhed/', 'Public sector publication', 'da+en');
+
 const insertControl = db.prepare(
   'INSERT OR REPLACE INTO controls (id, framework_id, control_number, title, title_nl, description, description_nl, category, subcategory, level, iso_mapping, implementation_guidance, verification_guidance, source_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
 );
@@ -114,6 +143,48 @@ insertControl.run('d-maerket:DM01', 'd-maerket', 'DM01', 'Penetration testing', 
 
 // Digst controls
 insertControl.run('digst-sikkerhed:DS01', 'digst-sikkerhed', 'DS01', 'ISMS establishment', 'Etablering af ISMS', 'The organization shall establish, implement, maintain and continually improve an information security management system.', 'Organisationen skal etablere, implementere, vedligeholde og lobende forbedre et ledelsessystem for informationssikkerhed.', 'ISMS', 'Ledelsessystem', null, 'A.5.1', 'Establish ISMS scope, policy, risk assessment methodology, and statement of applicability.', 'Verify ISMS documentation, management commitment, and continuous improvement records.', null);
+
+// CFCS ICS control
+insertControl.run('cfcs-ics:ICS01', 'cfcs-ics', 'ICS01', 'Separation of IT and OT networks', 'Adskillelse af IT- og OT-netvaerk', 'Industrial control systems must be physically or logically separated from the corporate IT network.', 'Industrielle kontrolsystemer skal vaere fysisk eller logisk adskilt fra virksomhedens IT-netvaerk.', 'Netvaerksisolering', 'OT/IT-separation', 'Krav', '8.22', null, null, null);
+
+// CFCS Ransomware control
+insertControl.run('cfcs-ransomware:RW01', 'cfcs-ransomware', 'RW01', 'Email filtering against ransomware', 'E-mail-filtrering mod ransomware', 'The organization must implement advanced email filtering that blocks executable attachments.', 'Organisationen skal implementere avanceret e-mail-filtrering der blokerer eksekverbare vedhaeftninger.', 'Forebyggelse', 'E-mail', 'Krav', '8.23', null, null, null);
+
+// CFCS Cloud control
+insertControl.run('cfcs-cloud:CL01', 'cfcs-cloud', 'CL01', 'Risk assessment before cloud adoption', 'Risikovurdering foer cloud-adoption', 'The organization must conduct a risk assessment before cloud migration.', 'Organisationen skal gennemfoere en risikovurdering foer migration til cloud.', 'Risikovurdering', 'Klassifikation', 'Krav', '5.7', null, null, null);
+
+// CFCS Supply Chain control
+insertControl.run('cfcs-supply-chain:SC01', 'cfcs-supply-chain', 'SC01', 'Vendor risk assessment', 'Risikovurdering af leverandoerer', 'The organization must conduct a risk assessment of all vendors with access to systems.', 'Organisationen skal gennemfoere en risikovurdering af alle leverandoerer med adgang til systemer.', 'Leverandoervurdering', 'Risiko', 'Krav', '5.19', null, null, null);
+
+// CFCS Secure Dev control
+insertControl.run('cfcs-secure-dev:SD01', 'cfcs-secure-dev', 'SD01', 'Secure software development lifecycle (SSDLC)', 'Sikker softwareudviklingslivscyklus', 'The organization must implement a secure software development lifecycle.', 'Organisationen skal implementere en sikker softwareudviklingslivscyklus.', 'Sikker udviklingsproces', 'SDLC', 'Krav', '8.25', null, null, null);
+
+// Digst FDA control
+insertControl.run('digst-fda:FDA01', 'digst-fda', 'FDA01', 'MitID integration for public services', 'MitID-integration for offentlige tjenester', 'Public digital services must integrate with MitID as primary identification solution.', 'Offentlige digitale tjenester skal integrere med MitID som primaer identifikationsloesning.', 'Digital identitet', 'MitID', 'Krav', '8.5', null, null, null);
+
+// Finanstilsynet control
+insertControl.run('finanstilsynet-ikt:FT01', 'finanstilsynet-ikt', 'FT01', 'Board responsibility for ICT risk management', 'Bestyrelsens ansvar for IKT-risikostyring', 'The board must approve and regularly review the ICT risk management strategy.', 'Bestyrelsen skal godkende og regelmaeessigt gennemga IKT-risikostyringsstrategi.', 'IKT-governance', 'Ledelsesansvar', 'Krav', '5.1', null, null, null);
+
+// NIS2-DK control
+insertControl.run('nis2-dk:NIS01', 'nis2-dk', 'NIS01', 'Management responsibility for cybersecurity (NIS2 Art. 20)', 'Ledelsens ansvar for cybersikkerhed', 'Management of essential and important entities must approve and supervise cybersecurity measures.', 'Ledelsen i vaesentlige og vigtige enheder skal godkende og foeere tilsyn med cybersikkerhedsforanstaltninger.', 'Governance', 'Ledelsesansvar', 'Krav', '5.1', null, null, null);
+
+// Sikkerhedscirkul aeret control
+insertControl.run('sikkerhedscirkulaeret:SIK01', 'sikkerhedscirkulaeret', 'SIK01', 'Classification levels for information', 'Klassifikationsniveauer for information', 'Government information must be classified at four levels: TOP SECRET, SECRET, CONFIDENTIAL, RESTRICTED.', 'Statslig information skal klassificeres i fire niveauer: YDERST HEMMELIGT, HEMMELIGT, FORTROLIGT og TIL TJENESTEBRUG.', 'Klassifikation', 'Niveauer', 'Krav', '5.12', null, null, null);
+
+// MedCom control
+insertControl.run('medcom-standarder:MC01', 'medcom-standarder', 'MC01', 'Encryption of health messages', 'Kryptering af sundhedsmeddelelser', 'All electronic health messages containing patient-identifiable information must be encrypted during transmission.', 'Alle elektroniske sundhedsmeddelelser der indeholder patientidentificerbare oplysninger skal krypteres under transmission.', 'Beskedsikkerhed', 'Kryptering', 'Krav', '8.24', null, null, null);
+
+// Energistyrelsen control
+insertControl.run('energistyrelsen-cyber:EN01', 'energistyrelsen-cyber', 'EN01', 'Management responsibility for cybersecurity in energy sector', 'Ledelsesansvar for cybersikkerhed i energisektoren', 'Management in energy companies must approve and monitor cybersecurity measures.', 'Ledelsen i energivirksomheder skal godkende og overvaage cybersikkerhedsforanstaltninger.', 'Governance', 'Ledelse', 'Krav', '5.1', null, null, null);
+
+// Trafikstyrelsen control
+insertControl.run('trafikstyrelsen-ikt:TS01', 'trafikstyrelsen-ikt', 'TS01', 'Cybersecurity policy for transport companies', 'Cybersikkerhedspolitik for transportvirksomheder', 'Transport companies covered by NIS2 must have an approved cybersecurity policy.', 'Transportvirksomheder omfattet af NIS2 skal have en godkendt cybersikkerhedspolitik.', 'Governance', 'Politik', 'Krav', '5.1', null, null, null);
+
+// KL control
+insertControl.run('kl-sikkerhed:KL01', 'kl-sikkerhed', 'KL01', 'Municipal ISMS based on ISO 27001', 'Kommunalt ISMS baseret pa ISO 27001', 'Municipalities must establish an ISMS based on ISO 27001.', 'Kommuner skal etablere et ISMS baseret pa ISO 27001.', 'ISMS', 'Ledelsessystem', 'Krav', '5.1', null, null, null);
+
+// DS 484 control
+insertControl.run('ds484:DS01', 'ds484', 'DS01', 'Management commitment to information security', 'Ledelsesforpligtelse til informationssikkerhed', 'Management must demonstrate commitment to information security.', 'Ledelsen skal demonstrere forpligtelse til informationssikkerhed.', 'Organisatorisk sikkerhed', 'Ledelse', 'Krav', '5.1', null, null, null);
 
 db.exec("INSERT INTO controls_fts(controls_fts) VALUES('rebuild')");
 

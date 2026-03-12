@@ -13,7 +13,7 @@ describe('handleGetFramework', () => {
 
     // Framework name
     expect(text).toContain('CFCS Cybersikkerhedsvejledning');
-    expect(text).toContain('CFCS Cybersecurity Guidance');
+    expect(text).toContain('CFCS Cybersecurity Guidelines');
 
     // Issuing body
     expect(text).toContain('Center for Cybersikkerhed');
@@ -21,8 +21,8 @@ describe('handleGetFramework', () => {
     // Sectors
     expect(text).toContain('government');
 
-    // Control count -- cfcs has 4 controls in test DB
-    expect(text).toContain('4');
+    // Control count -- cfcs has 58 controls in prod DB
+    expect(text).toContain('58');
 
     // Categories present
     expect(text).toContain('Netvaerkssikkerhed');

@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-ansvar.ai%2Fmcp-blue)](https://ansvar.ai/mcp)
 
-Structured access to Danish government cybersecurity standards: CFCS Cybersikkerhedsvejledning, Digitaliseringsstyrelsen security guidance, Statens ISO 27001 implementation, D-maerket digital trust label, Datatilsynet security measures, and Sundhedsdatastyrelsen IT security requirements. Bilingual Danish/English with FTS search, ISO 27001/27002 cross-references, and sector-based filtering.
+Structured access to 20 Danish government cybersecurity standards and frameworks: CFCS guidance (general, ICS/OT, ransomware, cloud, supply chain, secure development), Digitaliseringsstyrelsen (security + FDA), Statens ISO 27001, D-maerket, Datatilsynet, Sundhedsdatastyrelsen, MedCom, Finanstilsynet IKT/DORA, NIS2 Danish implementation, Sikkerhedscirkulaeret, Energistyrelsen, Trafikstyrelsen, KL municipal guidance, and DS 484. 482 controls, bilingual Danish/English, FTS search, ISO 27001/27002 cross-references, and sector-based filtering.
 
 Part of the [Ansvar MCP Network](https://ansvar.ai/mcp) -- specialist MCP servers for compliance and security intelligence.
 
@@ -76,13 +76,27 @@ Add to your MCP client config:
 | Source | Authority | Items | Language | Refresh |
 |--------|-----------|-------|----------|---------|
 | CFCS Cybersikkerhedsvejledning | Center for Cybersikkerhed (CFCS) | 58 controls | DA+EN | Annual |
+| CFCS ICS/OT-sikkerhedsvejledning | Center for Cybersikkerhed (CFCS) | 25 controls | DA+EN | Annual |
+| CFCS Ransomware-beskyttelse | Center for Cybersikkerhed (CFCS) | 18 controls | DA+EN | Annual |
+| CFCS Cloudsikkerhedsvejledning | Center for Cybersikkerhed (CFCS) | 19 controls | DA+EN | Annual |
+| CFCS Leverandoerstyring | Center for Cybersikkerhed (CFCS) | 17 controls | DA+EN | Annual |
+| CFCS Sikker softwareudvikling | Center for Cybersikkerhed (CFCS) | 18 controls | DA+EN | Annual |
 | Digitaliseringsstyrelsens sikkerhedsvejledning | Digitaliseringsstyrelsen | 36 controls | DA+EN | Annual |
+| Faellesoffentlig Digital Arkitektur (FDA) | Digitaliseringsstyrelsen | 16 controls | DA+EN | Annual |
 | Statens implementering af ISO 27001 | Digitaliseringsstyrelsen / Statens IT | 55 controls | DA+EN | Annual |
 | D-maerket | Erhvervsstyrelsen / D-maerket | 27 criteria | DA+EN | Annual |
 | Datatilsynets sikkerhedsforanstaltninger | Datatilsynet (Danish DPA) | 30 measures | DA+EN | Annual |
 | Sundhedsdatastyrelsens IT-sikkerhedskrav | Sundhedsdatastyrelsen (SDS) | 21 requirements | DA+EN | Annual |
+| MedCom standarder | MedCom | 17 standards | DA+EN | Annual |
+| Finanstilsynets IKT-krav | Finanstilsynet (Danish FSA) | 24 requirements | DA+EN | Annual |
+| NIS2 dansk implementering (L 111) | Forsvarsministeriet | 21 requirements | DA+EN | Annual |
+| Sikkerhedscirkulaeret | Justitsministeriet / PET / CFCS | 21 requirements | DA+EN | Annual |
+| Energistyrelsens cybersikkerhedskrav | Energistyrelsen | 15 requirements | DA+EN | Annual |
+| Trafikstyrelsens IKT-sikkerhedskrav | Trafikstyrelsen | 12 requirements | DA+EN | Annual |
+| KL Kommunernes sikkerhedsvejledning | KL (Kommunernes Landsforening) | 14 guidelines | DA+EN | Annual |
+| DS 484 Dansk Standard | Dansk Standard (DS) | 18 controls | DA+EN | Annual |
 
-**Total:** 227 controls and requirements across 6 Danish cybersecurity frameworks.
+**Total:** 482 controls and requirements across 20 Danish cybersecurity frameworks.
 
 For full coverage details, see [COVERAGE.md](COVERAGE.md).
 
@@ -93,10 +107,10 @@ For full coverage details, see [COVERAGE.md](COVERAGE.md).
 | Gap | Status |
 |-----|--------|
 | SikkerDigital.dk citizen/SME guidance | Planned for v1.1 |
-| Finanstilsynet IT security requirements | Planned for v1.1 |
-| Energistyrelsen cybersecurity requirements | Planned for v1.2 |
-| NIS2 Danish transposition (Cybersikkerhedsloven) | Planned once enacted |
-| ISO/IEC 27001:2022 full text | Excluded -- commercial ISO license; ISO cross-references available via `get_iso_mapping` |
+| Danske Regioner IT-sikkerhed | Planned for v1.2 |
+| CFCS Trusselsvurdering (annual threat assessment) | Not planned -- threat assessments, not control catalogs |
+| DS/ISO 27001:2022 full text | Excluded -- commercial ISO license; ISO cross-references available via `get_iso_mapping` |
+| Persondataloven / GDPR full text | Available via Denmark Law MCP; Datatilsynet measures here operationalize the security requirements |
 
 For the complete gap list, see [COVERAGE.md -- What's NOT Included](COVERAGE.md#whats-not-included).
 
@@ -106,7 +120,7 @@ For the complete gap list, see [COVERAGE.md -- What's NOT Included](COVERAGE.md#
 
 | Tool | Category | Description |
 |------|----------|-------------|
-| `search_controls` | Search | Full-text search across all 6 frameworks. Returns controls ranked by FTS5 relevance. |
+| `search_controls` | Search | Full-text search across all 20 frameworks. Returns controls ranked by FTS5 relevance. |
 | `search_by_sector` | Search | Returns frameworks for a sector (`government`, `healthcare`, `finance`, etc.), optionally filtered by keyword. |
 | `get_control` | Lookup | Full record for a single control: bilingual description, implementation guidance, ISO mapping. |
 | `get_framework` | Lookup | Metadata for a framework: issuing body, version, control count, category breakdown. |
@@ -127,11 +141,25 @@ For full parameter documentation, return formats, and examples, see [TOOLS.md](T
 | Source | Last Refresh | Refresh Schedule |
 |--------|-------------|-----------------|
 | CFCS Cybersikkerhedsvejledning | 2026-03-12 | Annual |
+| CFCS ICS/OT | 2026-03-12 | Annual |
+| CFCS Ransomware | 2026-03-12 | Annual |
+| CFCS Cloud | 2026-03-12 | Annual |
+| CFCS Supply Chain | 2026-03-12 | Annual |
+| CFCS Secure Dev | 2026-03-12 | Annual |
 | Digitaliseringsstyrelsen | 2026-03-12 | Annual |
+| FDA (Digst) | 2026-03-12 | Annual |
 | Statens ISO 27001 | 2026-03-12 | Annual |
 | D-maerket | 2026-03-12 | Annual |
 | Datatilsynet | 2026-03-12 | Annual |
 | Sundhedsdatastyrelsen | 2026-03-12 | Annual |
+| MedCom | 2026-03-12 | Annual |
+| Finanstilsynet | 2026-03-12 | Annual |
+| NIS2 (L 111) | 2026-03-12 | Annual |
+| Sikkerhedscirkulaeret | 2026-03-12 | Annual |
+| Energistyrelsen | 2026-03-12 | Annual |
+| Trafikstyrelsen | 2026-03-12 | Annual |
+| KL | 2026-03-12 | Annual |
+| DS 484 | 2026-03-12 | Annual |
 
 The `ingest.yml` workflow runs automatically on the most frequent source schedule. The `check-updates.yml` workflow runs daily and creates a GitHub issue if any source is overdue.
 
