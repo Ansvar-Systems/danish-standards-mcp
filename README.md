@@ -71,6 +71,33 @@ Add to your MCP client config:
 
 ---
 
+
+### Public Endpoint (Streamable HTTP)
+
+Connect from any MCP client (Claude Desktop, ChatGPT, Cursor, VS Code, GitHub Copilot):
+
+```
+https://mcp.ansvar.eu/standards-dk/mcp
+```
+
+**Claude Code:**
+```bash
+claude mcp add standards-dk --transport http https://mcp.ansvar.eu/standards-dk/mcp
+```
+
+**Claude Desktop / Cursor** (`claude_desktop_config.json`):
+```json
+{
+  "mcpServers": {
+    "standards-dk": {
+      "type": "url",
+      "url": "https://mcp.ansvar.eu/standards-dk/mcp"
+    }
+  }
+}
+```
+
+No authentication required. See [all Ansvar MCP endpoints](https://github.com/Ansvar-Systems/Ansvar-Architecture-Documentation/blob/main/docs/mcp-remote-access.md).
 ## What's Included
 
 | Source | Authority | Items | Language | Refresh |
@@ -196,7 +223,7 @@ This MCP provides structured access to Danish cybersecurity standards sourced fr
 
 ## Ansvar MCP Network
 
-This server is part of the [Ansvar MCP Network](https://ansvar.ai/mcp) -- 149 specialist MCP servers covering legislation, compliance frameworks, and cybersecurity standards.
+This server is part of the [Ansvar MCP Network](https://ansvar.ai/mcp) -- 276+ specialist MCP servers covering legislation, compliance frameworks, and cybersecurity standards.
 
 | Category | Servers | Coverage |
 |----------|---------|----------|
