@@ -1,6 +1,7 @@
 // src/tools/search-controls.ts
 import { getDb } from '../db.js';
 import { successResponse, errorResponse } from '../response-meta.js';
+import { buildCitation } from '../citation.js';
 
 interface SearchControlsRow {
   id: string;
@@ -135,5 +136,15 @@ export function handleSearchControls(args: {
     );
   }
 
-  return successResponse(lines.join('\n'));
+  return {
+    ...successResponse(lines.join('\n')),
+    _citations: rows.map((row) =>
+      buildCitation(
+        `${row.control_number} (${row.framework_id})`,
+        row.title_nl ?? row.title ?? row.control_number,
+        'get_control',
+        { control_id: row.id },
+      ),
+    ),
+  };
 }

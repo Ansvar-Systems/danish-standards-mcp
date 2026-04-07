@@ -1,6 +1,7 @@
 // src/tools/get-iso-mapping.ts
 import { getDb } from '../db.js';
 import { successResponse, errorResponse } from '../response-meta.js';
+import { buildCitation } from '../citation.js';
 
 interface IsoMappingRow {
   id: string;
@@ -76,5 +77,13 @@ export function handleGetIsoMapping(args: { iso_control?: string }) {
     }
   }
 
-  return successResponse(lines.join('\n'));
+  return {
+    ...successResponse(lines.join('\n')),
+    _citation: buildCitation(
+      `ISO 27002 ${isoControl}`,
+      `ISO 27002 Control ${isoControl} — Danish Framework Mapping`,
+      'get_iso_mapping',
+      { iso_control: iso_control! },
+    ),
+  };
 }
