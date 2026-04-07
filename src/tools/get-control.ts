@@ -2,6 +2,7 @@
 import { getDb } from '../db.js';
 import { successResponse, errorResponse } from '../response-meta.js';
 import type { Control, Framework } from '../types.js';
+import { buildCitation } from '../citation.js';
 
 interface ControlWithFramework extends Control {
   framework_name: string;
@@ -116,5 +117,14 @@ export function handleGetControl(args: { control_id?: string }) {
     lines.push(`**Source:** ${row.source_url}`);
   }
 
-  return successResponse(lines.join('\n'));
+  return {
+    ...successResponse(lines.join('\n')),
+    _citation: buildCitation(
+      `${row.control_number} (${row.framework_name})`,
+      `${row.control_number} — ${row.title_nl}`,
+      'get_control',
+      { control_id: control_id! },
+      row.source_url,
+    ),
+  };
 }

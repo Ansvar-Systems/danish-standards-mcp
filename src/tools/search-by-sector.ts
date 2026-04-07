@@ -1,6 +1,7 @@
 // src/tools/search-by-sector.ts
 import { getDb } from '../db.js';
 import { successResponse, errorResponse } from '../response-meta.js';
+import { buildCitation } from '../citation.js';
 
 // Recognised sector identifiers. Add more as new frameworks are ingested.
 const ALLOWED_SECTORS = new Set([
@@ -161,5 +162,17 @@ export function handleSearchBySector(args: { sector?: string; query?: string }) 
     }
   }
 
-  return successResponse(lines.join('\n'));
+  const citations = frameworkRows.map((row) =>
+    buildCitation(
+      row.id,
+      row.name_nl ?? row.name,
+      'get_framework',
+      { framework_id: row.id },
+    ),
+  );
+
+  return {
+    ...successResponse(lines.join('\n')),
+    _citations: citations,
+  };
 }
