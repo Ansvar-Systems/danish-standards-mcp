@@ -1,6 +1,6 @@
 # Coverage -- Danish Standards MCP
 
-> Last verified: 2026-03-12 | Database version: 1.0.0
+> Last verified: 2026-05-01 | Database version: 1.0.0
 
 This document declares exactly what data the Danish Standards MCP contains, what it does not contain, and the limitations of each source. It is the contract with users.
 

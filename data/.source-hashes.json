@@ -1,0 +1,22 @@
+{
+  "cfcs-cloud.json": "0fe5edaa2fd04ceef1ca8c4cb456ccf5df3199522f001eaef20ebfed05e554eb",
+  "cfcs-ics.json": "aa439078c4ff083681886b0928b92cade131f08d9a905cad8257329c21de37a6",
+  "cfcs-ransomware.json": "6c22dcf5ff1a36d27154796b9c385a524a6b1ddf9dc188e7ec52022efaf2acad",
+  "cfcs-secure-dev.json": "0cfdf689be501aaf7bd80862fc572924ca54ffdaeda0a130721bd1483c076b86",
+  "cfcs-supply-chain.json": "6bbbedbbd4b5e36bd7c7636c6df2908dd6ab7ebcb31dcdd5d648d3aa2c1a288f",
+  "cfcs-vejledning.json": "8926ba8d1e71fd6cc849bc7d908f3c13b2165dbaf3cce0dc0ca2244c024c6ce5",
+  "d-maerket.json": "d5524bfe3eb73eb5c540354a6a0a8d333a822a0c2d683db735bc6436a0e15db3",
+  "datatilsynet-dk.json": "42955c12987b86b3b9aa956d73418b8fa48cc67388824dece2031a1922c3b435",
+  "digst-fda.json": "85e2c624d3245cda97a9f082d067a8ca0f97bdb62c41b63cf5ab0dcd958a8a29",
+  "digst-sikkerhed.json": "12649eed5ac7f50ccb19ef086754a1f4142f1dd6ffed0ba525a17ef588127db5",
+  "ds484.json": "e7533343d660efb60905d588f955752704a111d043cc79bf34adff1976cb77b6",
+  "energistyrelsen-cyber.json": "8a68cc4ff333264b64fce4cfaa178ca57c1989a2fc6a5c7fea40191caeb04e27",
+  "finanstilsynet-ikt.json": "501a255762453d89289f9dec837b2660d526b5e5c841b3c77b32b02d943b2c9a",
+  "kl-sikkerhed.json": "7942681db79cc61b91feedc91f6ddd92a58093823cee933d50df91d86743a43b",
+  "medcom-standarder.json": "cec6e9209f176844ee3928beb56bdd4b8704b2a42a29ab897c8a350b6119cad0",
+  "nis2-dk.json": "8270298345f201145f019e216f6ee2561fe39c423c80331033b5adad13976aaf",
+  "sds-sundhed.json": "414fe9b57cc78858af5f48ffd59ba1cc26b0896597271a8b6d18a8db1569e20d",
+  "sikkerhedscirkulaeret.json": "67b485ad1d4a3a938353d83dc396a87c0ddd6f1bbe144a87c220f00b1bd8c142",
+  "statens-iso27001.json": "c0681bb26ce32fc98f78c3c65b0730afa7b23baceff69b913236c685cab5a912",
+  "trafikstyrelsen-ikt.json": "c61268fea087b95cc3ca7e0e2f3fef7132b1bab8ac50c047943de95a6dbd7dd1"
+}
